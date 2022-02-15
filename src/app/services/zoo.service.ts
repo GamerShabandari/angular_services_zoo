@@ -7,8 +7,8 @@ import { Animal } from '../models/animal';
 export class ZooService {
 
   private animals: Animal[] = [
-    new Animal("lion", 12),
-    new Animal("tiger", 7)
+    // new Animal("lion", 12),
+    // new Animal("tiger", 7)
   ];
 
   constructor() { }
@@ -24,33 +24,33 @@ export class ZooService {
     for (let i = 0; i < this.animals.length; i++) {
       const animal_i = this.animals[i];
 
-      if(animalToFeed.type === animal_i.type)
+      if (animalToFeed.type === animal_i.type)
 
-      animal_i.isHungry = ! animal_i.isHungry
-      
+        animal_i.isHungry = !animal_i.isHungry
+
     }
 
   }
 
-  removeAnimal(animalToRemove: Animal){
+  removeAnimal(animalToRemove: Animal) {
 
     for (let i = 0; i < this.animals.length; i++) {
       const animal_i = this.animals[i];
 
-      if(animalToRemove.type === animal_i.type)
+      if (animalToRemove.type === animal_i.type)
 
-      this.animals.splice(i,1);
-      
+        this.animals.splice(i, 1);
+
     }
 
   }
 
-  addAnimal(animalToAdd:string, age:string){
+  addAnimal(animalToAdd: string, age: string) {
 
-    console.log(animalToAdd);
-    console.log(age);
+    
+        this.animals.push(new Animal(animalToAdd, Number(age)))
+        
 
-    this.animals.push(new Animal(animalToAdd, Number(age)))
-
+     
   }
 }
