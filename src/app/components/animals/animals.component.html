@@ -1,0 +1,6 @@
+<div>
+    <ul>
+       <li *ngFor="let a of animals"> <button (click)="deleteMe(a)">delete</button> {{a.type}}, aged {{a.age}} and ishungry = {{a.isHungry}}<button (click)="feedMe(a)">Feed</button></li>
+    </ul>
+
+</div>
