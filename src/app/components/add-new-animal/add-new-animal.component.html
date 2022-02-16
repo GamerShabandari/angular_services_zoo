@@ -1,5 +1,22 @@
-<h1>Add an animal to your Zoo</h1>
 
+<header>
+    <h1>Add an animal to your Zoo</h1>
+</header>
+
+<!-- 
 <input type="text" placeholder="type of animal" #animalType>
 
-<button (click)="addAnimal(animalType.value); animalType.value=''">save new animal</button>
+<button (click)="addAnimal(animalType.value); animalType.value=''">save new animal</button> -->
+
+
+<div class="animalSelectionContainer">
+
+    <div (click)="addAnimal('tiger')"><img src="../../../assets/img/tiger_happy.png" alt="happy tiger" width="60px"></div>
+    <div (click)="addAnimal('lion')"><img src="../../../assets/img/lion_happy.png" alt="happy tiger" width="60px"></div>
+    <div (click)="addAnimal('dino')"><img src="../../../assets/img/dino_happy.png" alt="happy tiger" width="60px"></div>
+    <div (click)="addAnimal('panda')"><img src="../../../assets/img/panda_happy.png" alt="happy tiger" width="60px"></div>
+    <div (click)="addAnimal('giraff')"><img src="../../../assets/img/giraff_happy.png" alt="happy tiger" width="60px"></div>
+    <div (click)="addAnimal('monkey')"><img src="../../../assets/img/monkey_happy.png" alt="happy tiger" width="60px"></div>
+    
+</div>
+
