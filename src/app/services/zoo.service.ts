@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Animal } from '../models/animal';
 
 @Injectable({
@@ -7,47 +8,25 @@ import { Animal } from '../models/animal';
 export class ZooService {
 
   private animals: Animal[] = [];
+  animals$: Observable<Animal[]> = of(this.animals);
 
   constructor() { }
 
-  getAnimals(): Animal[] {
+  feedAnimal(index:number) {
 
-    return this.animals;
-
-  }
-
-  feedAnimal(animalToFeed: Animal) {
-
-    for (let i = 0; i < this.animals.length; i++) {
-      const animal_i = this.animals[i];
-
-      if (animalToFeed.type === animal_i.type)
-
-        animal_i.isHungry = !animal_i.isHungry
-
-    }
+    this.animals[index].isHungry = !this.animals[index].isHungry
 
   }
 
-  removeAnimal(animalToRemove: Animal) {
+  removeAnimal(index:number) {
 
-    for (let i = 0; i < this.animals.length; i++) {
-      const animal_i = this.animals[i];
-
-      if (animalToRemove.type === animal_i.type)
-
-        this.animals.splice(i, 1);
-
-    }
+    this.animals.splice(index, 1);
 
   }
 
   addAnimal(animalToAdd: string, age: string) {
 
-    
         this.animals.push(new Animal(animalToAdd, Number(age)))
-        
-
      
   }
 }

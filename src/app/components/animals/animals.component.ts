@@ -15,16 +15,19 @@ export class AnimalsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.animals = this.service.getAnimals();
+    this.service.animals$.subscribe((animalsFromService:Animal[])=>{
 
+      this.animals = animalsFromService;
+
+    })
   }
 
-  feedMe(animal:Animal){
-    this.service.feedAnimal(animal)
+  feedMe(index:number){
+    this.service.feedAnimal(index)
   }
 
-  deleteMe(animal:Animal){
-    this.service.removeAnimal(animal)
+  deleteMe(index:number){
+    this.service.removeAnimal(index)
   }
 
 }
