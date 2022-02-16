@@ -1,5 +1,5 @@
 <h1>Add an animal to your Zoo</h1>
 
 <input type="text" placeholder="type of animal" #animalType>
-<input type="number" placeholder="age" #animalAge>
-<button (click)="addAnimal(animalType.value, animalAge.value); animalType.value=''; animalAge.value=''">save new animal</button>
+
+<button (click)="addAnimal(animalType.value); animalType.value=''">save new animal</button>

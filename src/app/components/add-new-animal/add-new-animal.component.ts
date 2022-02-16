@@ -13,9 +13,9 @@ export class AddNewAnimalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addAnimal(type:string, age:string){
+  addAnimal(type:string){
 
-    this.service.addAnimal(type, age)
+    this.service.addAnimal(type)
 
   }
 

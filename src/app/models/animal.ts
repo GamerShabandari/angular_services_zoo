@@ -1,20 +1,13 @@
 export class Animal {
     type: string
-    age: number
     isHungry: boolean
+    lastFed: Date
 
-    constructor(type:string, age:number){
+    constructor(type:string){
 
         this.type = type
-        this.age = age
         this.isHungry = false
-   
-
-        setInterval(function () {
-
-          //this.isHungry = true
-            
-        },10000)
+        this.lastFed = new Date()
 
     }
 }
