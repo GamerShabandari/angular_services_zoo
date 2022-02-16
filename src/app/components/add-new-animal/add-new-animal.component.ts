@@ -15,8 +15,12 @@ export class AddNewAnimalComponent implements OnInit {
 
   addAnimal(type:string){
 
-    this.service.addAnimal(type)
+    if(type===""){
+      return
+    }else{
+      this.service.addAnimal(type)
 
+    }
   }
 
 }

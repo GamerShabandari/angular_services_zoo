@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { interval, observable, Observable, of } from 'rxjs';
 import { Animal } from '../models/animal';
 
 @Injectable({
@@ -11,6 +11,7 @@ export class ZooService {
   animals$: Observable<Animal[]> = of(this.animals);
 
   constructor() { }
+
 
   feedAnimal(index:number) {
 
