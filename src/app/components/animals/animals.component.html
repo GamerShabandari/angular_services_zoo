@@ -1,5 +1,18 @@
 <div>
     <ul>
-       <li [class.full]="a.isHungry===false"  [class.hungry]="a.isHungry" *ngFor="let a of animals"> <button (click)="deleteMe(a)">delete</button> {{a.type}}, aged {{a.age}} and ishungry = {{a.isHungry}} <button (click)="feedMe(a)">Feed</button></li>
+        <li [class.full]="a.isHungry===false" [class.hungry]="a.isHungry" *ngFor="let a of animals"> <button
+                (click)="deleteMe(a)">delete</button> {{a.type}}, aged {{a.age}} and ishungry = {{a.isHungry}} <button
+                (click)="feedMe(a)">Feed</button></li>
+    </ul>
+</div>
+
+<br>
+
+<h2>Here are all your hungry animals at the moment</h2>
+<div>
+    <ul>
+        <ng-container *ngFor="let a of animals">
+            <li *ngIf="a.isHungry"> <h2> {{a.type}}</h2> <span>{{a.isHungry}}</span> </li>
+        </ng-container>
     </ul>
 </div>

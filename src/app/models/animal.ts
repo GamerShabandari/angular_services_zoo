@@ -8,6 +8,13 @@ export class Animal {
         this.type = type
         this.age = age
         this.isHungry = false
+   
+
+        setInterval(function () {
+
+          //this.isHungry = true
+            
+        },10000)
 
     }
 }

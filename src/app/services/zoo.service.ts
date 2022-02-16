@@ -6,10 +6,7 @@ import { Animal } from '../models/animal';
 })
 export class ZooService {
 
-  private animals: Animal[] = [
-    // new Animal("lion", 12),
-    // new Animal("tiger", 7)
-  ];
+  private animals: Animal[] = [];
 
   constructor() { }
 
