@@ -1,13 +1,12 @@
 
-
-
 .animalContainer{
    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .hungry{

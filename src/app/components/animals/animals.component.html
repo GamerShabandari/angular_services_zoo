@@ -10,9 +10,9 @@
 
 <h2>Here are all your hungry animals at the moment</h2>
 <div>
-    <ul>
+    
         <ng-container *ngFor="let a of animals; let i=index">
             <div *ngIf="a.isHungry"> <img src="{{a.imgUrlHungry}}" class="animalImg"><button class="feedBtn" (click)="feedMe(i)">Feed</button> </div>
         </ng-container>
-    </ul>
+    
 </div>
