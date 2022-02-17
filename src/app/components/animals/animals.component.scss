@@ -1,9 +1,80 @@
+
+
+
+.animalContainer{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
 .hungry{
-    background-color: rgba(172, 32, 32, 0.589);
-    border: 1px solid rgba(180, 19, 19, 0.534);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+    background-color:rgba(255, 68, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .full{
-    background-color: rgba(69, 235, 69, 0.493);
-    border: 1px solid rgba(83, 247, 83, 0.452);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+    background-color: rgba(240, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 20px;
 }
+
+
+.feedBtn{
+    background-color: bisque;
+    padding: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    
+    &:hover{
+        background-color: black;
+        color: azure;
+    }
+}
+.deleteBtn{
+    background-color: bisque;
+    padding: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    letter-spacing: 2px;
+
+    &:hover{
+        background-color: black;
+        color: azure;
+    }
+
+}
+
+.animalImg{
+
+    width: 150px;
+
+};

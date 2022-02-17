@@ -13,12 +13,12 @@ export class AddNewAnimalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addAnimal(type:string){
+  addAnimal(type:string, url:string, hungryUrl:string){
 
     if(type===""){
       return
     }else{
-      this.service.addAnimal(type)
+      this.service.addAnimal(type, url, hungryUrl)
 
     }
   }

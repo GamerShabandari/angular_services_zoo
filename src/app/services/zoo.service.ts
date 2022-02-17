@@ -25,9 +25,9 @@ export class ZooService {
 
   }
 
-  addAnimal(animalToAdd: string) {
+  addAnimal(animalToAdd: string, url:string, hungryUrl:string) {
 
-        this.animals.push(new Animal(animalToAdd))
+        this.animals.push(new Animal(animalToAdd, url, hungryUrl))
      
   }
 }

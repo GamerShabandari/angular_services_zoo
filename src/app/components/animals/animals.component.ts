@@ -28,6 +28,8 @@ export class AnimalsComponent implements OnInit {
 
   deleteMe(index:number){
     this.service.removeAnimal(index)
+    
+    
   }
 
 }
