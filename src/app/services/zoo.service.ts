@@ -10,24 +10,29 @@ export class ZooService {
   private animals: Animal[] = [];
   animals$: Observable<Animal[]> = of(this.animals);
 
-  constructor() { }
+  constructor() {
+
+  }
 
 
-  feedAnimal(index:number) {
+  feedAnimal(index: number) {
 
     this.animals[index].isHungry = !this.animals[index].isHungry
 
+
   }
 
-  removeAnimal(index:number) {
+  removeAnimal(index: number) {
 
     this.animals.splice(index, 1);
 
+
   }
 
-  addAnimal(animalToAdd: string, url:string, hungryUrl:string) {
+  addAnimal(animalToAdd: string, url: string, hungryUrl: string) {
 
-        this.animals.push(new Animal(animalToAdd, url, hungryUrl))
-     
+    this.animals.push(new Animal(animalToAdd, url, hungryUrl))
+
+
   }
 }
