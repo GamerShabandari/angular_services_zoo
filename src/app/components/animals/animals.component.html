@@ -1,7 +1,7 @@
 <div class="zooContainer">
     
     <div class="animalContainer">
-        <div [class.full]="a.isHungry===false" [class.hungry]="a.isHungry" *ngFor="let a of animals; let i=index"> <button class="deleteBtn" (click)="deleteMe(i)">delete</button> <br> <img src="{{a.imgUrl}}" class="animalImg"><button class="feedBtn" (click)="feedMe(i)">Feed</button></div>
+        <div [class.full]="a.isHungry===false" [class.hungry]="a.isHungry" *ngFor="let a of animals; let i=index"> <button class="deleteBtn" (click)="deleteMe(i)">delete</button> <br> <img src="{{a.imgUrl}}" class="animalImg animate__animated animate__bounce animate__delay-1s"><button class="feedBtn" (click)="feedMe(i)">Feed</button></div>
     </div>
     
 </div>

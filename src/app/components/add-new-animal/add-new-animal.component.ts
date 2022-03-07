@@ -19,7 +19,6 @@ export class AddNewAnimalComponent implements OnInit {
       return
     }else{
       this.service.addAnimal(type, url, hungryUrl)
-
     }
   }
 
